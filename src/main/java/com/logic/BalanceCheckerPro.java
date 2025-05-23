@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class BalanceCheckerPro {
 
     public static void main(String[] args) {
-        int[] array = {3, 7, 1, 11, 7, 2, 1};
+        int[] array = {3, 7, 1, 11, 7, 3, 1};
         System.out.println(checkBalance(array) ? "Condição OK" : "Condição não OK");
     }
 

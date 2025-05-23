@@ -1,13 +1,11 @@
 package com.logic;
 
-import java.util.ArrayList;
-
 public class BalanceCheckerBasic {
 
     public static void main(String[] args) {
-        int[] array = {3, 7, 1, 11, 7, 2, 1};
+        int[] array = {3, 7, 1, 11, 7, 3, 1};
 
-        Integer indiceMeio = indicemeio(array);
+        Integer indiceMeio = indiceMeio(array);
         Integer somaDireta = somarDireta(array, indiceMeio);
         Integer somaEsquerda = somarEsquerda(array, indiceMeio);
         if (somaEsquerda == somaDireta) {
@@ -18,7 +16,7 @@ public class BalanceCheckerBasic {
 
     }
 
-    private static Integer indicemeio(int[] array) {
+    private static Integer indiceMeio(int[] array) {
         return array.length / 2;
 
     }
