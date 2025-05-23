@@ -2,17 +2,10 @@ package com.logic;
 
 import java.util.ArrayList;
 
-public class BasicWay {
+public class BalanceCheckerBasic {
 
     public static void main(String[] args) {
-        java.util.List<Integer> array = new ArrayList<>(7);
-        array.add(3);
-        array.add(7);
-        array.add(1);
-        array.add(11);
-        array.add(7);
-        array.add(3);
-        array.add(1);
+        int[] array = {3, 7, 1, 11, 7, 2, 1};
 
         Integer indiceMeio = indicemeio(array);
         Integer somaDireta = somarDireta(array, indiceMeio);
@@ -25,28 +18,28 @@ public class BasicWay {
 
     }
 
-    private static Integer indicemeio(java.util.List<Integer> array) {
-        return array.size() / 2;
+    private static Integer indicemeio(int[] array) {
+        return array.length / 2;
 
     }
 
-    private static Integer somarEsquerda(java.util.List<Integer> array, Integer indiceMeio) {
+    private static Integer somarEsquerda(int[] array, Integer indiceMeio) {
         Integer soma = 0;
 
-        for (int i = 0; i < array.size(); i++) {
+        for (int i = 0; i < array.length; i++) {
             if (i < indiceMeio) {
-                soma += array.get(i);
+                soma += array[i];
             }
         }
         return soma;
     }
 
-    private static Integer somarDireta(java.util.List<Integer> array, Integer indiceMeio) {
+    private static Integer somarDireta(int[] array, Integer indiceMeio) {
         Integer soma = 0;
 
-        for (int i = 0; i < array.size(); i++) {
+        for (int i = 0; i < array.length; i++) {
             if (i > indiceMeio) {
-                soma += array.get(i);
+                soma += array[i];
             }
         }
         return soma;
